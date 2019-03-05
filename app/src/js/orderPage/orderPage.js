@@ -82,8 +82,6 @@ class OrderPage extends Component {
       let order1=[];
       let order2=[];
       dingdan2=[];
-      //请求币比三个平台所有房间信息（open,finished）
-      // await Apis.instance().db_api().exec("get_houses",[['1.14.4','1.14.5','1.14.3']]).then(house=>{
       await Apis.instance().db_api().exec("get_houses",[['1.14.6']]).then(house=>{
         house.map(v=>{
           v.finished_rooms.map(x=>{
